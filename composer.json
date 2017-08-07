@@ -1,15 +1,26 @@
 {
-  "name": "treehouselabs/swagger-validation",
+  "name": "sanderlissenburg/swagger-validation",
   "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sander Lissenburg",
+      "email": "sanderlissenburg@treehouse.nl",
+      "role": "Developer"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "TreeHouse\\SwaggerValidation\\": "src/"
     }
   },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
   "require": {
     "php": ">=7.1",
     "symfony/yaml": "^3.3"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
   }
 }
