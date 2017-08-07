@@ -1,0 +1,15 @@
+{
+  "name": "treehouselabs/swagger-validation",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "TreeHouse\\SwaggerValidation\\": "src/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=7.1",
+    "symfony/yaml": "^3.3"
+  }
+}
