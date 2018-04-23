@@ -7,7 +7,7 @@ namespace TreeHouse\SwaggerValidation\Validator;
 use Exception;
 use TreeHouse\SwaggerValidation\Property;
 
-class Object
+class ObjectValidator
 {
     /**
      * @param string     $property
