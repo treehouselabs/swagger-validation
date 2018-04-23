@@ -7,7 +7,7 @@ namespace TreeHouse\SwaggerValidation\Validator;
 use Exception;
 use TreeHouse\SwaggerValidation\TypeTransformer;
 
-class Type
+class TypeValidator
 {
     /**
      * @param mixed      $item

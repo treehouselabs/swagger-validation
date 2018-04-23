@@ -41,7 +41,7 @@ class Definition
      */
     public function checkWith($data): bool
     {
-        Validator\Object::hasValidProperties($data, $this->properties, 'Definition ' . $this->getName());
+        Validator\ObjectValidator::hasValidProperties($data, $this->properties, 'Definition ' . $this->getName());
 
         return true;
     }

@@ -59,10 +59,10 @@ class ResponseSchema
             throw new Exception('Response schema cannot be null');
         }
 
-        Validator\Type::assertOneOf($data, $this->type ? [$this->type] : null, 'ResponseSchema');
+        Validator\TypeValidator::assertOneOf($data, $this->type ? [$this->type] : null, 'ResponseSchema');
 
         if ($this->properties && is_object($data)) {
-            Validator\Object::hasValidProperties($data, $this->properties, 'ResponseSchema');
+            Validator\ObjectValidator::hasValidProperties($data, $this->properties, 'ResponseSchema');
         }
 
         if ($this->definitionReference !== null && in_array(gettype($data), ['array', 'object'])) {

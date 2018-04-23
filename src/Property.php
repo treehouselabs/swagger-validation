@@ -77,7 +77,7 @@ class Property
     {
         $type = TypeTransformer::getTransformedTypeFor($data);
 
-        Validator\Type::assertOneOf(
+        Validator\TypeValidator::assertOneOf(
             $data,
             $this->allowedTypes,
             'Property ' . $this->getName()
@@ -93,7 +93,7 @@ class Property
         }
 
         if ($type === 'object' && $this->properties && !$this->definitionReference) {
-            Validator\Object::hasValidProperties($data, $this->properties, 'Property ' . $this->getName());
+            Validator\ObjectValidator::hasValidProperties($data, $this->properties, 'Property ' . $this->getName());
 
             return true;
         }
@@ -116,7 +116,7 @@ class Property
             && $this->allowedSubTypes
             && $this->allowedTypes && in_array('array', $this->allowedTypes)) {
             foreach ($data as $key => $item) {
-                Validator\Type::assertOneOf(
+                Validator\TypeValidator::assertOneOf(
                     $data,
                     $this->allowedTypes,
                     'in array of Property ' . $this->getName()
