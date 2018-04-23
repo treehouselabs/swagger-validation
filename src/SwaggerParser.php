@@ -15,7 +15,7 @@ class SwaggerParser
      */
     public static function parse($input): SwaggerFile
     {
-        $parsedFile = Yaml::parse($input, Yaml::PARSE_KEYS_AS_STRINGS);
+        $parsedFile = Yaml::parse($input);
 
         return new SwaggerFile($parsedFile, new DefinitionsStore());
     }
