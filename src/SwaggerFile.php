@@ -29,7 +29,7 @@ class SwaggerFile
 
         if (isset($data['definitions'])) {
             foreach ($data['definitions'] as $name => $definitionData) {
-                $properties = $this->createPropertiesFromSpecification($definitionData['properties']);
+                $properties = $this->createPropertiesFromSpecification($definitionData['properties'] ?? []);
 
                 $this->definitionsStore->addDefinition(new Definition($name, $properties, $definitionsStore));
             }
